@@ -1,0 +1,15 @@
+Create a webpage with a contact form consisting of:
+1. Title select Field (Mr/Mrs/Ms)
+2. Name Field
+3. Email Field
+4. Password Field (Password should be masked)
+5. Phone Field
+6. Address fields
+7. Submit button
+You can choose to use plain JavaScript or any other framework/library to build it.
+Functionality (Must haves)
+---------------------------------------------
+1. Each of the input fields should have validation.
+2. User should not be able to submit if the form is not valid.
+3. After clicking submit, the entered data should appear on a different view without
+reloading the page.
