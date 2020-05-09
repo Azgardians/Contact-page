@@ -7,6 +7,7 @@
   background: url(bg.png) no-repeat center;
   background-size: contain;
   height: 100vh;
+  padding-bottom: 20%;
 }
 .contact-section ul{
   list-style: none;
