@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import Aux from '../../HOC/Aux';
+import Home from '../Home/Home';
 import './Contact.css';
 
 const initialState ={
@@ -9,7 +10,7 @@ const initialState ={
         password:"",
         phone:"",
         address:"",
-        checkValue:true,
+        checkValue:false,
         titlerror:"",
         nameerror:"",
         emailerror:"",
@@ -86,8 +87,9 @@ class Contact extends Component{
         event.preventDefault();
         const isValid = this.validateHandler();
         if (isValid){
-            alert("You have submitted a post")
+            this.setState({checkValue:true});
             this.setState(initialState);
+
         }
         
     };
@@ -95,8 +97,10 @@ class Contact extends Component{
     render(){
         
         return(
-            <Aux>               
-                <div className="contact-section">
+            <Aux>{
+                this.state.checkValue 
+                ? <Home head={this.state.name}/>
+                :<div className="contact-section">
                     <nav>
                         <ul>
                             {/* eslint-disable-next-line */}
@@ -160,6 +164,7 @@ class Contact extends Component{
                             <textarea 
                                 className="contact-form-text" 
                                 placeholder="Your address"
+                                name="address"
                                 value={this.state.address}
                                 onChange={this.handleChange}
                                 >
@@ -169,6 +174,8 @@ class Contact extends Component{
                         <input type="submit" className="contact-form-btn" value="Send"/>
                     </form>
                 </div>
+            }              
+                
                 
             </Aux>
             
