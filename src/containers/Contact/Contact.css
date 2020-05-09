@@ -5,7 +5,7 @@
 }
 .contact-section{
   background: url(bg.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
 }
 .contact-section ul{
